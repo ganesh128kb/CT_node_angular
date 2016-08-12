@@ -1,0 +1,2 @@
+The example now shows the alert after the paragraph has been hidden, 
+and the alert now appears correctly after the event rather than before it.

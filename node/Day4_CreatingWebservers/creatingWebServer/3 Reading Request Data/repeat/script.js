@@ -1,0 +1,15 @@
+var connect = require('connect');
+
+var app = connect()
+      //order matters
+   .use(connect.static('public'))
+   .use(function (req, res) {
+		
+	    if (req.url === '/process') {
+			res.end(req.body.name + ' would repeat ' + req.body.repeat + ' times.');
+		} else {
+			res.end("Invalid Request");
+		}
+	}).use(connect.bodyParser())
+
+	.listen(3000);
